@@ -10,12 +10,15 @@ import {
     Input,
     IconButton,
     useColorModeValue,
+    Divider,
+    Image
   } from '@chakra-ui/react';
   import { ReactNode } from 'react';
   import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { BiMailSend } from 'react-icons/bi';
-  
-  const Logo = (props: any) => {
+  import conceiveimg from "../../Images/subhg.jpeg"
+import { BsWhatsapp } from 'react-icons/bs';
+  const Logo = (props) => {
     return (
       <svg
         height={32}
@@ -38,10 +41,6 @@ import {
     children,
     label,
     href,
-  }: {
-    children: ReactNode;
-    label: string;
-    href: string;
   }) => {
     return (
       <chakra.button
@@ -65,7 +64,7 @@ import {
     );
   };
   
-  const ListHeader = ({ children }: { children: ReactNode }) => {
+  const ListHeader = ({ children }) => {
     return (
       <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
         {children}
@@ -79,16 +78,28 @@ import {
         bg={useColorModeValue('gray.50', 'gray.900')}
         color={useColorModeValue('gray.700', 'gray.200')}>
         <Container as={Stack} maxW={'6xl'} py={10}>
-          <SimpleGrid
-            templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 2fr' }}
+          <Box
+          
+            w="80%"
+            margin="auto"
+            display={"grid"}
+ gridTemplateColumns={["repeat(1,1fr)","repeat(1,1fr)","repeat(2,1fr)","repeat(2,1fr)","repeat(2,1fr)"]} gap={["20px","20px","20px","120px","120px","120px"]}
             spacing={8}>
+                <Box>
             <Stack spacing={6}>
-              <Box>
-                <Logo color={useColorModeValue('gray.700', 'white')} />
+              <Box display={"flex"} justifyContent={"center"} alignItems={"center"} w="40%" margin={"auto"}>
+                <Image  margin={"auto"} src={"https://assets.lightfunnels.com/account-474/images_library/7357b2f2-7dc6-40a5-9119-09c54da9c4fd.v%20conceive%20home%20insemination%20kit.svg"} />
               </Box>
+              <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
               <Text fontSize={'sm'}>
-                © 2022 Chakra Templates. All rights reserved
+              V Conceive – A Subhag HealthTech Product,<br></br> Supported By Social Alpha – A Tata Trust Initiative
               </Text>
+            
+              
+              
+              </Box>
+              <Box display={"flex"} justifyItems={"center"} alignItems={"center"} textAlign={"center"} w={["70%","50%","40%","40%","40%"]} margin={"auto"}><Box  ><Link href="https://api.whatsapp.com/send?phone=919036490490&text=I+want+consult+with+Fertility+Counsellor"><Box display={"flex"} justifyContent={"space-around"}> <BsWhatsapp display="inline"/><Text>+91 9036 490 490</Text></Box></Link></Box></Box>
+              <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
               <Stack direction={'row'} spacing={6}>
                 <SocialButton label={'Twitter'} href={'#'}>
                   <FaTwitter />
@@ -99,9 +110,12 @@ import {
                 <SocialButton label={'Instagram'} href={'#'}>
                   <FaInstagram />
                 </SocialButton>
-              </Stack>
-            </Stack>
-            <Stack align={'flex-start'}>
+                
+              </Stack></Box>
+            </Stack></Box>
+            <Box display={"grid"}
+ gridTemplateColumns={["repeat(1,1fr)","repeat(2,1fr)","repeat(2,1fr)","repeat(2,1fr)","repeat(2,1fr)"]} gap={["20px","20px","0px","10px","100"]}>
+            <Stack align={'flex-start'} >
               <ListHeader>Company</ListHeader>
               <Link href={'#'}>About us</Link>
               <Link href={'#'}>Blog</Link>
@@ -117,30 +131,10 @@ import {
               <Link href={'#'}>Privacy Policy</Link>
               <Link href={'#'}>Satus</Link>
             </Stack>
-            <Stack align={'flex-start'}>
-              <ListHeader>Stay up to date</ListHeader>
-              <Stack direction={'row'}>
-                <Input
-                  placeholder={'Your email address'}
-                  bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-                  border={0}
-                  _focus={{
-                    bg: 'whiteAlpha.300',
-                  }}
-                />
-                <IconButton
-                  bg={useColorModeValue('green.400', 'green.800')}
-                  color={useColorModeValue('white', 'gray.800')}
-                  _hover={{
-                    bg: 'green.600',
-                  }}
-                  aria-label="Subscribe"
-                  icon={<BiMailSend />}
-                />
-              </Stack>
-            </Stack>
-          </SimpleGrid>
+            </Box>
+          </Box>
         </Container>
+        <Divider/>
       </Box>
     );
   }

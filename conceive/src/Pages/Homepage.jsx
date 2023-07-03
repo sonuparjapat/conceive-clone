@@ -22,6 +22,7 @@ import {
 import Reviews from './Reviews';
 import Rating from './Rating'
 import Ratingrender from './Ratingrender'
+import Footer from './Footer/Footer'
 let initaldata=[{
   "name":"sonu",
   "rating":4,
@@ -389,7 +390,7 @@ Embark on the Journey of Parenthood: Get Pregnant in Just 3 Steps!
 </Box>
 
 </Box>
-
+<Footer/>
 
 </div>
 
