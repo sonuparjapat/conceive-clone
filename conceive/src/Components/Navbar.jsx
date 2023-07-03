@@ -68,7 +68,7 @@ const navigate=useNavigate()
   const btnRef = React.useRef()
   return (
     <>
-      <Box zIndex={"overlay"} position="fixed" top="0" w="100%" bg="white" px={4}>
+      <Box border="1px solid red" zIndex={"overlay"} position="sticky" top={0}  bg="white" px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'} w="90%" margin="auto">
           
           <HStack spacing={8} alignItems={'center'}>
@@ -146,7 +146,7 @@ const navigate=useNavigate()
         </Drawer>: null}
       </Box>
 
-      <Box p={4}>Main Content Here</Box>
+  
     </>
   );
 }
