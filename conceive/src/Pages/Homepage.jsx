@@ -329,10 +329,10 @@ Embark on the Journey of Parenthood: Get Pregnant in Just 3 Steps!
 <Reviews/>
 
 {/* reviews box */}
-<Box w="80%" margin={"auto"} display="grid" gridTemplateColumns={"repeat(3,1fr)"} gap="20px">
+<Box w="80%" margin={"auto"}  display="grid" gridTemplateColumns={["repeat(1,1fr)","repeat(1,1fr)","repeat(2,1fr)","repeat(3,1fr)","repeat(3,1fr)"]} gap="20px">
 
 {initaldata.length>=1&&initaldata.map((el,index)=>
-  <Box bg="#f4f5f7" borderRadius={"10px"}>
+  <Box bg="#f4f5f7" borderRadius={"10px"} >
     
 <Box w="80%" margin="auto" mt="20px" display={"flex"} justifyContent={"space-between"} >
   <Box ><Text fontSize={"18px"} lineHeight={"23px"} fontWeight={600} color="#191e2a">{el.name}</Text></Box>
@@ -357,13 +357,38 @@ Embark on the Journey of Parenthood: Get Pregnant in Just 3 Steps!
 <YouTube   videoId={"I0c_mVUDpcM"}  /></Box></Box>
 
 {/* frequently asked questions */}
-<Box w='80%' margin="auto"><Text textAlign={"center"} fontSize={["20px","30px","40px","45px","54px"]} fontWeight={600} lineHeight={"70px" } mt="50px" color="#191e2a">Frequently asked questions</Text></Box>
+<Box w='80%' margin="auto" ><Text textAlign={"center"} fontSize={["20px","30px","40px","45px","54px"]} fontWeight={600} lineHeight={"70px" } mt="50px" color="#191e2a">Frequently asked questions</Text></Box>
 
-<Box w="80%" margin="auto" display={"grid"} gridTemplateColumns={["repeat(1,1fr)","repeat(1,1fr)","repeat(2,1fr)","repeat(2,1fr)","repeat(2,1fr)"]} gap="20px">
-  
+<Box w="80%" margin="auto" mt="50px" display={"grid"} gridTemplateColumns={["repeat(1,1fr)","repeat(1,1fr)","repeat(3,1fr)","repeat(3,1fr)","repeat(3,1fr)"]} gap="20px">
+  {frequentlyaskedquestions.length>=1&&frequentlyaskedquestions.map((question,index)=>
+  <Box>
+    <Text textAlign={"left"} fontSize={"18px"} lineHeight={"23px"} fontWeight={500} color="#191e2a">{question.q}</Text>
+<Text textAlign={"left"} fontSize={"16px"} lineHeight={"27px"} fontWeight={400} color="#3d4047" fontFamily={"inter-500"}>{question.ans}</Text>    </Box>)}
+
+</Box>
+<Box bg="#f4f5f7" mt="30px" >
+  <Text textAlign={"center"} fontSize={["20px","30px","35px","45px","54px"]} lineHeight={"70px"} fontWeight={600} fontFamily={"inter"} >As Featured In</Text>
+<Box w="80%"  margin="auto" pb="40px" display="grid" gridTemplateColumns={["repeat(1,1fr)","repeat(2,1fr)","repeat(6,1fr)","repeat(6,1fr)","repeat(6,1fr)",]} gap="30px" mt="30px">
+<Box mt={["0px","0px","40px","40px","40px"]}  display={"flex"} justifyContent={"center"} alignItems={"center"}><Image src=" https://assets.lightfunnels.com/cdn-cgi/image/width=3840,quality=80,format=auto/https://assets.lightfunnels.com/account-474/images_library/daf49aee-4255-4d23-863d-279385a2e53d.v%20conceive%20story%20publish%20in%20your%20story.png"/></Box>
+<Box mt={["0px","0px","40px","40px","40px"]}   display={"flex"} justifyContent={"center"} alignItems={"center"}><Image src="https://assets.lightfunnels.com/cdn-cgi/image/width=3840,quality=80,format=auto/https://assets.lightfunnels.com/account-474/images_library/32af61c4-29ce-4bd3-89ac-deef0d594f72.v%20conceive%20story%20publish%20in%20yahoo%20finance.png"/></Box>
+<Box  display={"flex"} justifyContent={"center"} alignItems={"center"}><Image src="https://assets.lightfunnels.com/cdn-cgi/image/width=750,quality=80,format=auto/https://assets.lightfunnels.com/account-474/images_library/167a040a-eb04-4ca8-88ef-2412d6eb371e.png"/></Box>
+<Box mt={["0px","0px","40px","40px","40px"]}   display={"flex"} justifyContent={"center"} alignItems={"center"}><Image src="https://assets.lightfunnels.com/cdn-cgi/image/width=3840,quality=80,format=auto/https://assets.lightfunnels.com/account-474/images_library/19eb69a3-4ad4-480c-9267-ff950dab359c.v%20conceive%20incubated%20in%20Soical%20Alpha.png"/></Box>
+<Box mt={["0px","0px","40px","40px","40px"]}   display={"flex"} justifyContent={"center"} alignItems={"center"}><Image src="https://assets.lightfunnels.com/cdn-cgi/image/width=750,quality=80,format=auto/https://assets.lightfunnels.com/account-474/images_library/b3fb4c88-9267-4dcb-ad25-02693d1c79e4.4.png"/></Box>
+<Box mt={["0px","0px","40px","40px","40px"]}   display={"flex"} justifyContent={"center"} alignItems={"center"}><Image src="https://assets.lightfunnels.com/cdn-cgi/image/width=3840,quality=80,format=auto/https://assets.lightfunnels.com/account-474/images_library/c6f8bc83-6654-4001-b8b0-a6a49973cdaf.v%20conceive%20story%20publish%20in%20navbharat%20times.png"/></Box>
 
 </Box>
 
+</Box>
+<Box bg="#fef8ec"  >
+  <Text textAlign={"center"} fontSize={["20px","30px","35px","45px","54px"]} lineHeight={"70px"} fontWeight={600} fontFamily={"inter"} pt="20px" >Certification</Text>
+<Box pb="30px"  mt="30px">
+<Box  display={"flex"} justifyContent={"center"} alignItems={"center"}><Image src="https://assets.lightfunnels.com/cdn-cgi/image/width=750,quality=80,format=auto/https://assets.lightfunnels.com/account-474/images_library/806c3e7a-2280-45d6-b3fd-7e4573d64903.MTIC_INTERCERT_ALTA_DEFINIZIONE.png"/></Box>
+
+
+
+</Box>
+
+</Box>
 
 
 </div>
